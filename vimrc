@@ -22,7 +22,7 @@ set tabstop=4        " tab width is 4 spaces
 set shiftwidth=4     " indent also with 4 spaces
 set expandtab        " expand tabs to spaces
 " wrap lines at 120 chars. 80 is somewhat antiquated with nowadays displays.
-set textwidth=120
+set textwidth=80
 " turn syntax highlighting on
 set t_Co=256
 syntax on
@@ -42,9 +42,6 @@ set comments=sl:/*,mb:\ *,elx:\ */
 "set tags+=~/.vim/tags/sdl
 "set tags+=~/.vim/tags/qt4
 
-" Install DoxygenToolkit from http://www.vim.org/scripts/script.php?script_id=987
-"let g:DoxygenToolkit_authorName="Gerhard Gappmeier <gerhard.gappmeier@ascolab.com>" 
-
 " Enhanced keyboard mappings
 "
 " in normal mode F2 will save the file
@@ -57,8 +54,6 @@ map <F3> :NERDTreeToggle<CR>
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 " recreate tags file with F5
 map <F5> :!ctags -R –c++-kinds=+p –fields=+iaS –extra=+q .<CR>
-" create doxygen comment
-map <F6> :Dox<CR>
 " build using makeprg with <F7>
 map <F7> :make<CR>
 " build using makeprg with <S-F7>
