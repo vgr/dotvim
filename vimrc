@@ -2,6 +2,8 @@
 " Description: Optimized for C/C++ development, but useful also for other things.
 " Author: Gerhard Gappmeier
 "
+
+" Calls that inits pathogen
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -49,6 +51,8 @@ set comments=sl:/*,mb:\ *,elx:\ */
 nmap <F2> :w<CR>
 " in insert mode F2 will exit insert, save, enters insert again
 imap <F2> <ESC>:w<CR>i
+" toggle NERDTree buffer 
+map <F3> :NERDTreeToggle<CR>
 " switch between header/source with F4
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 " recreate tags file with F5
