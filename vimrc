@@ -1,7 +1,9 @@
-    " VIM Configuration File
+" VIM Configuration File
 " Description: Optimized for C/C++ development, but useful also for other things.
 " Author: Gerhard Gappmeier
 "
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " set UTF-8 encoding
 set enc=utf-8
